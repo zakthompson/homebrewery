@@ -58,9 +58,9 @@ const BrewRenderer = createClass({
 	},
 
 	handleScroll : function(e){
-		this.setState((prevState)=>({
-			viewablePageNumber : Math.floor(e.target.scrollTop / e.target.scrollHeight * prevState.pages.length)
-		}));
+		this.setState({
+			viewablePageNumber : Math.floor(e.target.scrollTop / e.target.scrollHeight * this.state.pages.length)
+		});
 	},
 
 	shouldRender : function(pageText, index){
